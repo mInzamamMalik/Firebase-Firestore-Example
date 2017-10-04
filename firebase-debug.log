@@ -1,0 +1,74 @@
+[debug] [2017-10-04T05:10:34.579Z] ----------------------------------------------------------------------
+[debug] [2017-10-04T05:10:34.582Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AdMin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2017-10-04T05:10:34.583Z] CLI Version:   3.9.2
+[debug] [2017-10-04T05:10:34.583Z] Platform:      win32
+[debug] [2017-10-04T05:10:34.583Z] Node Version:  v6.10.3
+[debug] [2017-10-04T05:10:34.584Z] Time:          Wed Oct 04 2017 10:10:34 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:34.584Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-04T05:10:34.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-10-04T05:10:34.600Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Projects\samples-examples\firebase-firestore-example
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2017-10-04T05:10:39.087Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-04T05:10:39.087Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/0s8man-U-HzcKdQ3Tf40aR-YDJ2SOBU7MMaCJXAA_9A',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Oct 04 2017 10:10:39 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:39.800Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-04T05:10:39.854Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+ Wed Oct 04 2017 10:10:39 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:41.524Z] <<< HTTP RESPONSE 200
+[info] i  .firebaserc already has a default project, skipping
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2017-10-04T05:10:41.529Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-04T05:10:41.530Z] > authorizing via signed-in user
+[debug] [2017-10-04T05:10:41.531Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-04T05:10:41.531Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/0s8man-U-HzcKdQ3Tf40aR-YDJ2SOBU7MMaCJXAA_9A',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Oct 04 2017 10:10:41 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:41.952Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-04T05:10:42.023Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/delete-this-1329  
+ Wed Oct 04 2017 10:10:42 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:43.018Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-04T05:10:43.019Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/delete-this-1329/tokens  
+ Wed Oct 04 2017 10:10:43 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:44.075Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-04T05:10:44.076Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/delete-this-1329?updateMask=usageSettings { usageSettings: { consumerEnableStatus: 'ENABLED' } } 
+ Wed Oct 04 2017 10:10:44 GMT+0500 (Russia TZ 4 Standard Time)
+[debug] [2017-10-04T05:10:44.077Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/delete-this-1329?updateMask=usageSettings { usageSettings: { consumerEnableStatus: 'ENABLED' } } 
+ Wed Oct 04 2017 10:10:44 GMT+0500 (Russia TZ 4 Standard Time)
+[info] +  Wrote functions/package.json
+[info] +  Wrote functions/index.js
+[debug] [2017-10-04T05:10:47.435Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-04T05:10:47.638Z] <<< HTTP RESPONSE 200
