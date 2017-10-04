@@ -19,9 +19,8 @@ exports.creteUser = functions.https.onRequest((req, res) => {
             console.log("error in writing in db: ", e);
             res.send("error in writing in db, check logs");
         })
-        .then(ref => {
-            console.log("user added with id: " + ref.id);
-            res.send("user added with id: " + ref.id)
+        .then(querySnapshot => {
+            res.send("user added with id: " + req.body.id)
         });
 
 
@@ -52,18 +51,15 @@ exports.getUsers = functions.https.onRequest((req, res) => {
             console.log('Error getting documents', err);
             res.send('Error getting documents, check logs')
         })
-
         .then((docSnapshot) => {
-            // snapshot.forEach((doc) => {
-            //     console.log(doc.id, '=>', doc.data());
-            // });
-            if (!docSnapshot.exists) {
-                console.log('No such document!');
-                res.send('No such document!');
-            } else {
-                console.log('Document data:', docSnapshot.data());
-                res.send(docSnapshot.data())
-            }
+
+            var jsonData = {};
+
+            docSnapshot.forEach((doc) => {
+                console.log(doc.id, '=>', doc.data());
+                jsonData[doc.id] = doc.data(); //processing data
+            });
+            res.send(jsonData);
         });
 });
 
