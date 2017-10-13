@@ -96,3 +96,25 @@ exports.getUser = functions.https.onRequest((req, res) => {
     //         }
     //     });
 });
+
+// Query
+exports.getUser = functions.https.onRequest((req, res) => {
+
+
+    var usersRef = db.collection('users');
+    var query = usersRef.where('email', '==', "test099@gmail.com").get()
+        .then(snapshot => {
+
+            if (snapshot.size == 0) {
+                console.log("no user with this email");
+                res.send("no user with this email");
+            } else {
+                console.log("user is here: ", snapshot.docs[0])
+                res.send("user is here: " + snapshot.docs[0])
+            }
+        })
+        .catch(err => {
+            console.log('Error getting documents', err);
+        });
+
+});
